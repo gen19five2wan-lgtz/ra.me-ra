@@ -1,19 +1,9 @@
-import { useState, useEffect } from 'react'
 import restaurantInterior from './assets/restaurant_interior.png'
 import crabPasta from './assets/crab_pasta.png'
 import masuWine from './assets/masu_wine.png'
 import drinkBar from './assets/drink_bar.png'
 
 function App() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
